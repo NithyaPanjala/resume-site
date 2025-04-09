@@ -24,7 +24,11 @@
     background: #fff;
     padding: 2rem;
     border-radius: 15px;
+     display: flex;
+  justify-content: center;
+  align-items: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
   
   h1, h2, h3 {
