@@ -1,119 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panjala Nithya Vaibhavi - Resume</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f9fa;
-      color: #212529;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 20px 40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #dee2e6;
-      padding-bottom: 5px;
-    }
-    p, li {
-      line-height: 1.6;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .contact {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .contact p {
-      margin: 5px 0;
-    }
-    .section {
-      margin-bottom: 25px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nithya Vaibhavi | Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <div class="contact">
-      <h1>Panjala Nithya Vaibhavi</h1>
-      <p>Email: nithyapanjala25@gmail.com | Phone: +91 86883 04460</p>
-      <p>Location: Warangal, Telangana</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/panjala-nithya-vaibhavi-2862b9238">View Profile</a> | GitHub: <a href="https://github.com/NithyaPanjala">NithyaPanjala</a></p>
-    </div>
+    <header class="fade-in">
+      <h1>Nithya Vaibhavi</h1>
+      <p>Software Developer | Problem Solver | Tech Enthusiast</p>
+    </header>
 
-    <div class="section">
+    <section class="fade-in delay">
+      <h2>Contact</h2>
+      <ul class="contact">
+        <li><i class="fas fa-envelope"></i> nithyapanjala25@gmail.com</li>
+        <li><i class="fas fa-phone"></i> +91 8688304460</li>
+        <li><i class="fas fa-map-marker-alt"></i> Warangal, Telangana</li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/panjala-nithya-vaibhavi-2862b9238">LinkedIn</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/NithyaPanjala">GitHub</a></li>
+      </ul>
+    </section>
+
+    <section class="fade-in delay-2">
       <h2>Career Objective</h2>
-      <p>Aspiring to work in a dynamic and professional environment where I can contribute innovative ideas, enhance my technical and interpersonal skills, and solve real-world problems. Eager to leverage my analytical and problem-solving abilities to make meaningful contributions as a Software Developer.</p>
-    </div>
+      <p>Aspiring to work in a dynamic and professional environment where I can contribute innovative ideas, develop my technical and interpersonal skills, and solve real-world problems.</p>
+    </section>
 
-    <div class="section">
+    <section class="fade-in delay-3">
       <h2>Technical Skills</h2>
-      <ul>
-        <li>Languages & Frameworks: Python, Django, JavaScript</li>
-        <li>Web Technologies: HTML5, CSS3</li>
-        <li>Database: SQLite</li>
-        <li>Tools: GitHub, VS Code, SQLite Browser</li>
+      <ul class="skills">
+        <li>Python</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Django</li>
+        <li>SQLite</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="fade-in delay-4">
       <h2>Projects</h2>
-      <p><strong>E-Commerce Web Application - Full Stack (Django)</strong></p>
-      <ul>
-        <li>Developed a mobile-friendly e-commerce site with authentication and user profile management.</li>
-        <li>Features: product listings by category, filters, shopping cart, real-time total updates, admin dashboard.</li>
-      </ul>
-      <p><strong>Smart Traffic Management (IOT + Video Processing)</strong></p>
-      <ul>
-        <li>Led team using BackgroundSubtractorMOG2 for vehicle detection.</li>
-        <li>Simulated dynamic signal timing to reduce congestion.</li>
-      </ul>
-      <p><strong>Phishing URL Detection</strong> - Rule-based mini project</p>
-      <p><strong>Image Steganography</strong> - Web tool for secure message embedding in images</p>
-    </div>
+      <div class="project">
+        <h3>🛍️ E-Commerce Web Application</h3>
+        <p>Designed a full-stack e-commerce site with authentication, cart system, category filters, and admin dashboard using Django.</p>
+      </div>
+      <div class="project">
+        <h3>🚦 Smart Traffic Management System</h3>
+        <p>Implemented an IoT and video processing solution using OpenCV to control traffic lights based on vehicle density.</p>
+      </div>
+    </section>
 
-    <div class="section">
+    <section class="fade-in delay-5">
       <h2>Education</h2>
       <ul>
-        <li>B.Tech in Information Technology - KITSW, CGPA: 8.21 (2024)</li>
-        <li>Higher Secondary (TG Board) - 92.70% (2020)</li>
-        <li>Secondary (TG Board) - 92.15% (2018)</li>
+        <li><strong>B.Tech in IT</strong>, KITSW – 78% (2024)</li>
+        <li>Higher Secondary, TG Board – 92.70% (2020)</li>
+        <li>Secondary School, TG Board – 92.15% (2018)</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Initiator and leader of final-year project.</li>
-        <li>Selected for Best Innovation Idea at KITSW Internal Hackathon.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Co-Curricular</h2>
-      <ul>
-        <li>Active NSS Volunteer during graduation.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Personal Details</h2>
-      <ul>
-        <li>Date of Birth: 11 June 2002</li>
-        <li>Nationality: Indian</li>
-        <li>Hobbies: Gardening, Art & Craft, Playing Badminton</li>
-      </ul>
-    </div>
+    <footer class="fade-in delay-6">
+      <button class="download-btn">📄 Download Resume (PDF)</button>
+    </footer>
   </div>
 </body>
 </html>
