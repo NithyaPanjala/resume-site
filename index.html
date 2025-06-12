@@ -3,27 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nithya Vaibhavi | Portfolio Resume</title>
+  <title>Nithya Vaibhavi | Portfolio </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
+
 </head>
 <body>
-  <div class="container">
+  <canvas id="bgCanvas"></canvas>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <nav class="nav">
+    <a href="#career">Career 🎯</a>
+    <a href="#skills">Skills 🛠️</a>
+    <a href="#projects">Projects 💡</a>
+    <a href="#education">Education 🎓</a>
+    <a href="#achievements">Achievements 🏅</a>
+    <a href="#hobbies">Hobbies 🌿</a>
+  </nav>
+<main class="container">
+    
     <header class="header-card">
       <h1>Panjala Nithya Vaibhavi</h1>
-      <p>Email: <a href="mailto:nithyapanjala25@gmail.com">nithyapanjala25@gmail.com</a> | Warangal, Telangana</p>
+      <p>Email: <a href="mailto:nithyapanjala25@gmail.com">nithyapanjala25@gmail.com</a> |📍Warangal, Telangana </p>
       <p>
-        <a href="https://www.linkedin.com/in/panjala-nithya-vaibhavi-2862b9238" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/NithyaPanjala" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/panjala-nithya-vaibhavi-2862b9238" target="_blank">🔗LinkedIn</a> |
+        <a href="https://github.com/NithyaPanjala" target="_blank"> 🐱GitHub</a>
       </p>
     </header>
 
-    <section class="card" style="animation-delay: 0.2s">
-      <h2>Career Objective</h2>
+    <section id="career" class="fade-out">
+      <h2>Career Objective 🎯</h2>
       <p>Aspiring to work in a dynamic and professional environment where I can contribute innovative ideas, enhance my technical and interpersonal skills, and solve real-world problems. Eager to leverage my analytical and problem-solving abilities to make meaningful contributions as a Software Developer.</p>
     </section>
 
-    <section class="card" style="animation-delay: 0.4s">
-      <h2>Technical Skills</h2>
+    <section id="skills" class="fade-out">
+      <h2>Technical Skills 🛠️</h2>
       <ul>
         <li><strong>Languages & Frameworks:</strong> Python, Django</li>
         <li><strong>Web Technologies:</strong> HTML5, CSS3</li>
@@ -32,8 +46,8 @@
       </ul>
     </section>
 
-    <section class="card" style="animation-delay: 0.6s">
-      <h2>Projects</h2>
+     <section id="projects" class="fade-out">
+      <h2>Projects 💡</h2>
       <ul>
         <li><strong>E-Commerce Web Application – Full Stack (Django):</strong> Developed a full-featured e-commerce platform with custom authentication, profile management, and admin controls.</li>
         <li><strong>Smart Traffic Management (IoT + Video Processing):</strong> Led the team; used BackgroundSubtractorMOG2 for vehicle detection and dynamic signal timing simulation.</li>
@@ -41,8 +55,8 @@
       </ul>
     </section>
 
-    <section class="card" style="animation-delay: 0.8s">
-      <h2>Education</h2>
+    <section id="education" class="fade-out">
+      <h2>Education 🎓</h2>
       <ul>
         <li><strong>B.Tech in Information Technology</strong> – KITSW, Warangal | CGPA: 8.21 | Year: 2024</li>
         <li><strong>Higher Secondary (TG Board)</strong> – 92.70% | Year: 2020</li>
@@ -50,28 +64,117 @@
       </ul>
     </section>
 
-    <section class="card" style="animation-delay: 1s">
-      <h2>Achievements</h2>
+    <section id="achievements" class="fade-out">
+      <h2>Achievements 🏅</h2>
       <ul>
         <li>Initiator and leader of academic and personal projects.</li>
         <li>Selected among top innovative ideas at KITSW Internal Hackathon and received certificate of appreciation.</li>
       </ul>
     </section>
 
-    <section class="card" style="animation-delay: 1.2s" >
-      <h2>Co-Curricular Activities</h2>
+    <section id="hobbies" class="fade-out" >
+      <h2>Co-Curricular Activities 🌱</h2>
       <p>Active NSS Volunteer during graduation.</p>
     </section>
 
-    <section class="card" style="animation-delay: 1.4s">
-      <h2>Personal Details</h2>
+    <section id="hobbies" class="fade-out">
+      <h2>Personal Details 🧾</h2>
       <ul>
         <li><strong>Date of Birth:</strong> 11 June 2002</li>
         <li><strong>Nationality:</strong> Indian</li>
-        <li><strong>Hobbies:</strong> Gardening, Art and Craft, Playing Badminton</li>
+        <li><strong>Hobbies:</strong>🌿Gardening, 🎨Art and Craft, 🏸Playing Badminton</li>
         <li><strong>Address:</strong> 33-2-137/1, Thimmapur (Haveli), Warangal, Telangana</li>
       </ul>
     </section>
-  </div>
+</main>
+  <canvas id="dotCanvas"></canvas>
+   <script>
+    // Cursor Trail (Halo Effect)
+    const cursorTrail = document.getElementById('cursorTrail');
+    document.addEventListener('mousemove', (e) => {
+      cursorTrail.style.left = e.pageX + 'px';
+      cursorTrail.style.top = e.pageY + 'px';
+    });
+
+    // Canvas Floating Background Dots
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const dots = [];
+    for (let i = 0; i < 100; i++) {
+      dots.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: Math.random() - 0.5,
+        vy: Math.random() - 0.5,
+        radius: Math.random() * 2 + 1,
+      });
+    }
+
+    function drawDots() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < dots.length; i++) {
+        const d = dots[i];
+        d.x += d.vx;
+        d.y += d.vy;
+
+        if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
+        if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = "#ffffff88";
+        ctx.fill();
+
+        for (let j = i + 1; j < dots.length; j++) {
+          const dx = d.x - dots[j].x;
+          const dy = d.y - dots[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.moveTo(d.x, d.y);
+            ctx.lineTo(dots[j].x, dots[j].y);
+            ctx.strokeStyle = "#ffffff22";
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawDots);
+    }
+    // Scroll-triggered animations for each section
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.15 });
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+sections.forEach(section => {
+  observer.observe(section);
+
+  section.addEventListener('mouseenter', () => {
+    section.classList.remove('fade-out');
+  });
+
+  section.addEventListener('mouseleave', () => {
+    section.classList.add('fade-out');
+  });
+});
+    drawDots();
+
+    // Resize canvas on window resize
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
 </html>
